@@ -12,15 +12,17 @@ public class Tree<T>
 {
 	private List<TreeNode<T>> listOfNodes;
 
-	public Tree (TreeNode<T> rootNode)
+	public Tree (T rootNodeValue)
 	{
-		rootNode.setNodeType(NodeType.ROOT);
+		TreeNode<T> rootNode = new TreeNode<T>(rootNodeValue).setNodeType(NodeType.ROOT);
 		this.listOfNodes = new LinkedList<TreeNode<T>>();
 		this.listOfNodes.add(rootNode);
 	}
 
-	public Tree<T> addNode(TreeNode<T> parrentNode, TreeNode<T> newNode)
+	public Tree<T> addNode(TreeNode<T> parrentNode,T newNodeValue)
 	{
+		TreeNode<T> newNode = new TreeNode<T>(newNodeValue);
+
 		TreeNode<T> pn = this.listOfNodes.get(this.listOfNodes.lastIndexOf(parrentNode));
 
 		if (pn.isNodeTypeLeaf())
@@ -43,5 +45,36 @@ public class Tree<T>
 		this.listOfNodes.remove(node);
 
 		return this;
+	}
+
+	public boolean isValueInTree(T value)
+	{
+		for (TreeNode<T> tn : this.listOfNodes)
+		{
+			if (tn.getValue().equals(value)) return true;
+		}
+
+		return false;
+	}
+
+	public TreeNode<T> getTreeNodeByValue(T value)
+	{
+		for (TreeNode<T> tn : this.listOfNodes)
+		{
+			if (tn.getValue().equals(value))
+			{
+				return tn;
+			}
+		}
+
+		throw new TreeException("Can't find node by value.");
+	}
+
+	@Override
+	public String toString ()
+	{
+		return "Tree{" +
+				"listOfNodes=" + listOfNodes +
+				'}';
 	}
 }

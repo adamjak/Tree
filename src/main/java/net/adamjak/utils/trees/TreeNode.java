@@ -13,6 +13,12 @@ public class TreeNode<T>
 	private NodeType nodeType = NodeType.NODE;
 	private TreeNode<T> parrentNode;
 	private List<TreeNode<T>> childrenNodes = new LinkedList<TreeNode<T>>();
+	private final T value;
+
+	TreeNode (T value)
+	{
+		this.value = value;
+	}
 
 	NodeType getNodeType ()
 	{
@@ -39,9 +45,10 @@ public class TreeNode<T>
 		return false;
 	}
 
-	void setNodeType(NodeType nodeType)
+	TreeNode<T> setNodeType(NodeType nodeType)
 	{
 		this.nodeType = nodeType;
+		return this;
 	}
 
 	TreeNode<T> getParrentNode()
@@ -49,9 +56,10 @@ public class TreeNode<T>
 		return this.parrentNode;
 	}
 
-	void setParrentNode (TreeNode<T> parrentNode)
+	TreeNode<T> setParrentNode (TreeNode<T> parrentNode)
 	{
 		this.parrentNode = parrentNode;
+		return this;
 	}
 
 	List<TreeNode<T>> getChildrenNodes()
@@ -59,8 +67,22 @@ public class TreeNode<T>
 		return this.childrenNodes;
 	}
 
-	void addGhildrenNode (TreeNode<T> childrenNode)
+	TreeNode<T> addGhildrenNode (TreeNode<T> childrenNode)
 	{
 		this.childrenNodes.add(childrenNode);
+		return this;
+	}
+
+	public T getValue ()
+	{
+		return this.value;
+	}
+
+	@Override
+	public String toString ()
+	{
+		return "TreeNode{" +
+				"value=" + value +
+				'}';
 	}
 }
