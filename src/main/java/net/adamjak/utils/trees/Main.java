@@ -12,6 +12,7 @@ public class Main
 		Tree<Character> tree = new Tree<Character>('K');
 		tree.addNode(tree.getTreeNodeByValue('K'),'G');
 		tree.addNode(tree.getTreeNodeByValue('K'),'T');
+		tree.removeNode(tree.getTreeNodeByValue('T'));
 
 		System.out.println(tree);
 	}

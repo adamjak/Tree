@@ -14,6 +14,7 @@ public class TreeNode<T>
 	private TreeNode<T> parrentNode;
 	private List<TreeNode<T>> childrenNodes = new LinkedList<TreeNode<T>>();
 	private final T value;
+	private int level;
 
 	TreeNode (T value)
 	{
@@ -48,6 +49,10 @@ public class TreeNode<T>
 	TreeNode<T> setNodeType(NodeType nodeType)
 	{
 		this.nodeType = nodeType;
+		if (nodeType == NodeType.ROOT)
+		{
+			this.level = 0;
+		}
 		return this;
 	}
 
@@ -59,6 +64,7 @@ public class TreeNode<T>
 	TreeNode<T> setParrentNode (TreeNode<T> parrentNode)
 	{
 		this.parrentNode = parrentNode;
+		this.level = parrentNode.getLevel() + 1;
 		return this;
 	}
 
@@ -76,6 +82,11 @@ public class TreeNode<T>
 	public T getValue ()
 	{
 		return this.value;
+	}
+
+	public int getLevel ()
+	{
+		return this.level;
 	}
 
 	@Override

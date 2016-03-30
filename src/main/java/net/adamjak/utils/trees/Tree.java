@@ -1,7 +1,6 @@
 package net.adamjak.utils.trees;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Tomas Adamjak on 29.3.2016.
@@ -68,6 +67,15 @@ public class Tree<T>
 		}
 
 		throw new TreeException("Can't find node by value.");
+	}
+
+	public Set<TreeNode<T>> getPathBetweenTwoNodes(TreeNode<T> from, TreeNode<T> to)
+	{
+		Set<TreeNode<T>> path = new TreeSet<TreeNode<T>>();
+
+		// TODO: 30.3.2016  
+		
+		return path;
 	}
 
 	@Override
