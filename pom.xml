@@ -6,7 +6,24 @@
 
     <groupId>net.adamjak.utils</groupId>
     <artifactId>Tree</artifactId>
-    <version>0.7</version>
+    <version>0.8.0</version>
+    <packaging>jar</packaging>
+
+    <name>Tree</name>
+    <description>Simple library which create tree.</description>
+    <url>http://utils.adamjak.net</url>
+
+    <licenses>
+        <license>
+            <name>BSD 3-Clause License</name>
+            <url>LICENSE.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/adamjak/Tree.git</url>
+    </scm>
 
 
 </project>

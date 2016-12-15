@@ -18,6 +18,13 @@ public class Tree<T>
 		this.listOfNodes.add(rootNode);
 	}
 
+	/**
+	 * Add ned node into tree.
+	 *
+	 * @param parrentNode parent node in tree
+	 * @param newNodeValue value on new node
+	 * @return Return uldated tree.
+	 */
 	public Tree<T> addNode(TreeNode<T> parrentNode,T newNodeValue)
 	{
 		TreeNode<T> newNode = new TreeNode<T>(newNodeValue);
@@ -76,6 +83,43 @@ public class Tree<T>
 		// TODO: 30.3.2016  
 		
 		return path;
+	}
+
+	/**
+	 * @return Return root node in tree.
+	 */
+	public TreeNode<T> getRootNode()
+	{
+		TreeNode<T> root = null;
+
+		for (TreeNode<T> n : this.listOfNodes)
+		{
+			if (n.isNodeTypeRoot())
+			{
+				root = n;
+				break;
+			}
+		}
+
+		return root;
+	}
+
+	/**
+	 * @return List of leafs in tree.
+	 */
+	public List<TreeNode<T>> getListOfLeafs ()
+	{
+		List<TreeNode<T>> leafs = new LinkedList<TreeNode<T>>();
+
+		for (TreeNode<T> n : this.listOfNodes)
+		{
+			if (n.isNodeTypeLeaf())
+			{
+				leafs.add(n);
+			}
+		}
+
+		return leafs;
 	}
 
 	@Override
