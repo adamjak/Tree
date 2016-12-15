@@ -111,11 +111,18 @@ public class Tree<T>
 	{
 		List<TreeNode<T>> leafs = new LinkedList<TreeNode<T>>();
 
-		for (TreeNode<T> n : this.listOfNodes)
+		if (this.listOfNodes.size() == 1)
 		{
-			if (n.isNodeTypeLeaf())
+			leafs.add(this.listOfNodes.get(0));
+		}
+		else
+		{
+			for (TreeNode<T> n : this.listOfNodes)
 			{
-				leafs.add(n);
+				if (n.isNodeTypeLeaf())
+				{
+					leafs.add(n);
+				}
 			}
 		}
 
