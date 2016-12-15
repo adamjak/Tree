@@ -36,6 +36,10 @@ public class Tree<T>
 			pn.setNodeType(NodeType.NODE);
 			newNode.setNodeType(NodeType.LEAF);
 		}
+		else if (pn.isNodeTypeRoot())
+		{
+			newNode.setNodeType(NodeType.LEAF);
+		}
 
 		pn.addGhildrenNode(newNode);
 		newNode.setParrentNode(parrentNode);
