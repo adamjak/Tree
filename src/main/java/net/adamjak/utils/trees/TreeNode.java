@@ -21,7 +21,7 @@ public class TreeNode<T>
 		this.value = value;
 	}
 
-	NodeType getNodeType ()
+	public NodeType getNodeType ()
 	{
 		return this.nodeType;
 	}

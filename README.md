@@ -42,6 +42,6 @@ Maven repository
 <dependency>
     <groupid>net.adamjak.utils</groupid>
     <artifactid>Tree</artifactid>
-    <version>0.9.2</version>
+    <version>0.9.3</version>
 </dependency>
 ```
