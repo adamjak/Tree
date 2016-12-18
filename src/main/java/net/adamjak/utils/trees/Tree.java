@@ -133,6 +133,24 @@ public class Tree<T>
 		return leafs;
 	}
 
+	/**
+	 * @return Return height of tree.
+	 */
+	public int getTreeHeight ()
+	{
+		int height = 0;
+
+		for (TreeNode<T> n : this.listOfNodes)
+		{
+			if (height < n.getLevel())
+			{
+				height = n.getLevel();
+			}
+		}
+
+		return height;
+	}
+
 	@Override
 	public String toString ()
 	{
