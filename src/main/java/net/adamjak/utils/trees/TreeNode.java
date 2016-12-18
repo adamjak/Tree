@@ -56,7 +56,7 @@ public class TreeNode<T>
 		return this;
 	}
 
-	TreeNode<T> getParrentNode()
+	public TreeNode<T> getParrentNode()
 	{
 		return this.parrentNode;
 	}
@@ -68,7 +68,7 @@ public class TreeNode<T>
 		return this;
 	}
 
-	List<TreeNode<T>> getChildrenNodes()
+	public List<TreeNode<T>> getChildrenNodes()
 	{
 		return this.childrenNodes;
 	}
