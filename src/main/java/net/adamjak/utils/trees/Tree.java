@@ -148,7 +148,7 @@ public class Tree<T>
 			}
 		}
 
-		return height;
+		return height + 1;
 	}
 
 	@Override
