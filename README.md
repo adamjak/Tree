@@ -30,7 +30,6 @@ Maven repository
         <releases>
             <enabled>true</enabled>
             <updatepolicy>always</updatepolicy>
-            <checksumpolicy>fail</checksumpolicy>
         </releases>
         <id>Tree</id>
         <name>tomas adamjak</name>
