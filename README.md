@@ -30,10 +30,11 @@ Maven repository
         <releases>
             <enabled>true</enabled>
             <updatepolicy>always</updatepolicy>
+            <checksumPolicy>fail</checksumPolicy>
         </releases>
-        <id>Tree</id>
+        <id>Nexus</id>
         <name>tomas adamjak</name>
-        <url>http://utils.adamjak.net/maven2</url>
+        <url>http://repo.adamjak.net/nexus/content/repositories/adamjak_net_releases/</url>
         <layout>default</layout>
     </repository>
 </repositories>
@@ -41,6 +42,6 @@ Maven repository
 <dependency>
     <groupid>net.adamjak.utils</groupid>
     <artifactid>Tree</artifactid>
-    <version>0.9.3</version>
+    <version>0.9.4-RELEASE</version>
 </dependency>
 ```
